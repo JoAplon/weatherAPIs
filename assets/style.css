@@ -6,11 +6,25 @@
 }
 
 header{
-
+    height: 8vh;
+    border-bottom: 5px dashed rgb(255, 224, 177);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: linear-gradient(to right, rgb(254, 245, 231), rgb(255, 224, 177) );
 }
 
 main{
+    height: 92vh;
+    background-color: rgb(254, 245, 231);
+}
 
+.forecast{
+    background-color: aquamarine;
+}
+
+.searchCity{
+    background-color: salmon;
 }
 
 footer{
