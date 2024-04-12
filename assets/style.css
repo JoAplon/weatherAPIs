@@ -14,19 +14,29 @@ header{
     background: linear-gradient(to right, rgb(254, 245, 231), rgb(255, 224, 177) );
 }
 
-main{
+.container{
+    display: flex;
     height: 92vh;
     background-color: rgb(254, 245, 231);
 }
 
-.forecast{
-    background-color: aquamarine;
+.searchBox{
+    margin: 20px;
 }
 
 .searchCity{
     background-color: salmon;
+    width: 300px;
+    margin-right: 10px;
 }
 
-footer{
+.weatherBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
+.forecast-row{
+    background-color: aquamarine;
+    height: 300px;
 }
