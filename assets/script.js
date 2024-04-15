@@ -27,10 +27,9 @@ function weatherStats(city) {
         })
         .then(function (data) {
             console.log(data);
-            forecastContainer.innerHTML = '';
 
-            weatherBox.appendChild(createElement);
-
+            const weatherBox = document.querySelector('.weatherBox')
+            weatherBox.innerHTML = '';
 
             const createCard = document.createElement('div');
             createCard.classList.add('todaysWeather');
@@ -39,28 +38,30 @@ function weatherStats(city) {
             createHeader.textContent = city;
 
             const createP1 = document.createElement('p');
-            createP1.textContent = "<strong><br> Current Weather: </strong>" + data.weather[0].main;
+            createP1.textContent = "Current Weather: " + data.weather[0].main;
 
             const createP2 = document.createElement('p');
-            createP2.textContent = "<strong><br>The temperature is: </strong>" + data.main.temp;
+            createP2.textContent = "The temperature is: " + data.main.temp + "°F";
 
             const createP3 = document.createElement('p');
-            createP3.textContent = "<strong><br>Min Temp: </strong>" + data.main.temp_min;
+            createP3.textContent = "It Feels Like: " + data.main.feels_like + "°F";
 
             const createP4 = document.createElement('p');
-            createP4.textContent = "<strong><br>Max Temp: </strong>" + data.main.temp_max;
+            createP4.textContent = "Min Temp: " + data.main.temp_min + "°F";
 
-            // const createP5 = document.createElement('p');
-            // createP5.textContent = ;
+            const createP5 = document.createElement('p');
+            createP5.textContent = "Max Temp: " + data.main.temp_max + "°F";
 
-
+            const createP6 = document.createElement('p');
+            createP6.textContent = "Humidity: " + data.main.humidity + "%";
 
             createCard.appendChild(createHeader);
             createCard.appendChild(createP1);
             createCard.appendChild(createP2);
             createCard.appendChild(createP3);
             createCard.appendChild(createP4);
-            // createCard.appendChild(createP5);
+            createCard.appendChild(createP5);
+            createCard.appendChild(createP6);
 
             weatherBox.appendChild(createCard);
 
