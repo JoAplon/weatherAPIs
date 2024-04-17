@@ -84,6 +84,15 @@ header{
     margin-left: 370px;
 }
 
+.forecastHeader{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forecastHeader h3{
+    margin-right: 10px;
+}
+
 .eachDayCards{
     background-color: rgba(219, 130, 52, 0.736);
     padding: 2px;
