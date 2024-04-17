@@ -16,14 +16,44 @@
             .then(function (data) {
                 console.log(data);
 
+                const weatherDescription = data.weather[0].description;
+                let icon = '';
+
+                if (weatherDescription) {
+                    if (weatherDescription.includes('clear sky')) {
+                        icon = '☀️';
+                    } else if (weatherDescription.includes('few clouds')) {
+                        icon = '⛅️';
+                    } else if (weatherDescription.includes('overcast clouds') || weatherDescription.includes('broken clouds')) {
+                        icon = '☁️';
+                    } else if (weatherDescription.includes('rain') || weatherDescription.includes('shower rain')) {
+                        icon = '🌧️';
+                    } else if (weatherDescription.includes('thunderstorm')) {
+                        icon = '⛈️';
+                    } else if (weatherDescription.includes('snow')) {
+                        icon = '❄️';
+                    } else if (weatherDescription.includes('mist')) {
+                        icon = '🌫️';
+                    }
+                }
+
                 const weatherBox = document.querySelector('.weatherBox')
                 weatherBox.innerHTML = '';
 
-                const createCard = document.createElement('div');
-                createCard.classList.add('todaysWeather');
+                const cityContainer = document.createElement('div');
+                cityContainer.classList.add('cityContainer');
 
                 const createHeader = document.createElement('h2');
                 createHeader.textContent = city;
+
+                const iconElement = document.createElement('span');
+                iconElement.textContent = icon;
+
+                cityContainer.appendChild(createHeader);
+                cityContainer.appendChild(iconElement);
+
+                const createCard = document.createElement('div');
+                createCard.classList.add('todaysWeather');
 
                 const createP1 = document.createElement('p');
                 createP1.textContent = "Current Weather: " + data.weather[0].description;
@@ -37,7 +67,7 @@
                 const createP4 = document.createElement('p');
                 createP4.textContent = "Humidity: " + data.main.humidity + "%";
 
-                createCard.appendChild(createHeader);
+                createCard.appendChild(cityContainer);
                 createCard.appendChild(createP1);
                 createCard.appendChild(createP2);
                 createCard.appendChild(createP3);
