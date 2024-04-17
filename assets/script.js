@@ -192,7 +192,7 @@ function searchWeather() {
 
 function saveSearch(city) {
     console.log('Saving search for:', city);
-    
+
     let searches = JSON.parse(localStorage.getItem('weatherSearches')) || [];
 
     if (!searches.includes(city)) {

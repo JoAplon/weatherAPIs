@@ -1,29 +1,26 @@
 # Server-side-APIs
 
+![Static Badge](https://img.shields.io/badge/MIT-license?style=flat-square&label=License&labelColor=%23cdcdcd&color=salmon) 
+
 ## Description
+
+This application provides real time weather data in an easy to consume format. There is a large section for the present day weather with the temperature, humidity, and wind speed. There is also a search bar that holds your previous searches in a section beneath the button. Those previos searches are clickable if you want to loo at those locations again. The forecasts for the next few days are in cards beneath the main box. These update with each search and have a picture icon that corresonds with the weather.
+
+## Table of Contents
+
+- [Description](#description)
+- [Usage](#usage)
+- [Finished Application](#finishedApplication)
+- [Questions](#questions)
 
 ## Use
 
+This application can be used to view the weather in any city you wish to view. It would be useful for trip planning or daily use.
+
 ## Finished Application
 
-## Link to Application
+![Finished weather dashboard](image.png)
 
-## User Story
+## Questions
 
-## User Story
-
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-
-## Acceptance Criteria
-
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+For questions or feedback regarding this project, please contact me at JoAplon, through my [github](https://github.com/undefined), or my email, jordan0aplon@gmail.com.
