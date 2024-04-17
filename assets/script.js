@@ -3,6 +3,7 @@ const apiKey = '1d59d123b21d759ac3f9305f57e76274';
 const searchCity = document.querySelector('.searchCity');
 const forecastContainer = document.querySelector('.weatherBox');
 const forecastDays = document.querySelector('.forecastDays');
+const searchButton = document.getElementById('searchButton');
 
 
 function weatherStats(city) {
@@ -177,6 +178,7 @@ function getFiveDayForecast(city) {
 }
 
 function searchWeather() {
+    document.getElementById('searchButton').addEventListener('click', searchWeather)
     const cityInput = document.querySelector('.searchCity input')
     const city = cityInput.value.trim();
 
